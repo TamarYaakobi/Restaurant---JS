@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>דף הבית</title>
+    
+    <!-- טוען גופנים -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Mochiy+Pop+P+One&display=swap" rel="stylesheet">
+    
+    <!-- אייקונים -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet">
+    
+    <!-- קבצי עיצוב משלך -->
+    <link rel="stylesheet" href="../css/sargel.css">
+    <link rel="stylesheet" href="../css/index.css">
+
+    <!-- TailwindCSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body onload="hello(); addDataIndex()"
+    >
+
+    <!-- Cherry Blossom Animation -->
+    <div id="cherry-blossoms" class="fixed w-full h-full pointer-events-none z-0"></div>
+
+    <!-- Header -->
+    <header class="fixed  z-50 bg-[#0f1a2e]/25 backdrop-blur-md ">
+        <div class="container mx-auto px-4 py-3 flex items-center justify-between">
+            <div class="flex items-center">
+                    <img id="logo" src="../pics/לוגו עם מסגרת יותר.png">
+                
+                <nav class="hidden md:flex ml-10 space-x-6">
+                    <a href="#" class="text-white hover:text-primary transition font-['Orbitron'] text-sm uppercase tracking-wider"> Home </a>
+                    <div class="relative group">
+                        <a href="#" class="text-white hover:text-primary transition font-['Orbitron'] text-sm uppercase tracking-wider flex items-center">
+                            menu
+                            <div class="w-4 h-4 ml-1 flex items-center justify-center">
+                                <i class="ri-arrow-down-s-line"></i>
+                            </div>
+                        </a>
+                        <div class="absolute left-0 mt-2 w-48 bg-[#0f1a2e] border border-[#2a3a5a] rounded shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
+                            <a href="./tafrit.html" class="block px-4 py-2 text-sm text-white hover:bg-primary/20 transition">לכל המנות</a>
+                            <a href="./bufe.html" class="block px-4 py-2 text-sm text-white hover:bg-primary/20 transition">לבופה שלנו</a>
+                            <a href="#" onclick="selectCaI(event)" id="open" class="block px-4 py-2 text-sm text-white hover:bg-primary/20 transition">מנות ראשונות</a>
+                            <a href="#" onclick="selectCaI(event)" id="xm" class="block px-4 py-2 text-sm text-white hover:bg-primary/20 transition">מנות עיקריות</a>
+                            <a href="#" onclick="selectCaI(event)" id="xsa" class="block px-4 py-2 text-sm text-white hover:bg-primary/20 transition">סלטים</a>
+                            <a href="#" onclick="selectCaI(event)" id="xsu" class="block px-4 py-2 text-sm text-white hover:bg-primary/20 transition">מרקים</a>
+                            <a href="#" onclick="selectCaI(event)" id="xdr" class="block px-4 py-2 text-sm text-white hover:bg-primary/20 transition">משקאות</a>
+                            <a href="#" onclick="selectCaI(event)" id="xde" class="block px-4 py-2 text-sm text-white hover:bg-primary/20 transition">קינוחים</a>
+                        </div>
+                    </div>
+                    <!-- <a href="./Self-adjustment.html" class="text-white hover:text-primary transition font-['Orbitron'] text-sm uppercase tracking-wider">your design</a> -->
+                    <a href="./ourStory.html" class="text-white hover:text-primary transition font-['Orbitron'] text-sm uppercase tracking-wider"> blog</a>
+                </nav>
+            </div>
+
+            <div class="flex items-center space-x-4">
+                <div class="relative">
+                    <input type="text" placeholder="Search anime or merch..." class="bg-black text-white rounded-full pl-10 pr-4 py-2 text-sm w-48 md:w-64 focus:outline-none focus:ring-2 focus:ring-primary border-none">
+                    <div class="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 flex items-center justify-center text-gray-400">
+                        <i class="ri-search-line"></i>
+                    </div>
+                </div>
+
+                <div onclick="toggleHeart(this)" class="w-10 h-10 flex items-center justify-center rounded-full bg-black cursor-pointer relative">
+                    <i class="ri-heart-line text-white transition"></i>
+                  </div>
+
+                <a href="./tafrit.html#cart-area"><div class="w-10 h-10 flex items-center justify-center rounded-full bg-black text-white hover:text-primary transition cursor-pointer relative">
+                    <i class="ri-shopping-cart-line"></i>
+                    <span class="absolute -top-1 -right-1 w-5 h-5 flex items-center justify-center bg-primary text-white text-xs rounded-full"></span>
+                </div></a>
+
+                <button  onclick="window.location.href='enter.html'" class="hidden md:flex items-center bg-primary hover:bg-primary/90 text-white px-4 py-2 rounded-button transition whitespace-nowrap">
+                    <div class="w-5 h-5 mr-2 flex items-center justify-center">
+                        
+                    </div>
+                    <p id="SignIn">Sign In </p>
+                    <!-- <span hidden id="iN" class="circle-letter"></span> -->
+                </button>
+
+                <div class="w-10 h-10 md:hidden flex items-center justify-center rounded-full bg-black text-white hover:text-primary transition cursor-pointer">
+                    <i class="ri-menu-line"></i>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <span id="heading"></span>
+    <div id="slider">
+        <div class="slides">
+            <img src="../pics/תמונות מתחלפות/אוכל על הים.jpg" width="100%" />
+        </div>
+        <div class="slides">
+            <img src="../pics/תמונות מתחלפות/בופה.jpg" width="100%" />
+        </div>
+        <div class="slides">
+            <img src="../pics/תמונות מתחלפות/בר חשוך.jpg" width="100%" />
+        </div>
+        <div class="slides">
+            <img src="../pics/תמונות מתחלפות/מוזג שמפניה.jpg" width="100%" />
+        </div>
+        <div class="slides">
+            <img src="../pics/תמונות מתחלפות/עציצים.jpg" width="100%" />
+        </div>
+        <div class="slides">
+            <img src="../pics/תמונות מתחלפות/קופסת שימורים.jpg" width="100%" />
+        </div>
+        <div class="slides">
+            <img src="../pics/תמונות מתחלפות/שם עלה.jpg" width="100%" />
+        </div>
+        <div id="dot">
+            <span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span>
+        </div>
+    </div>
+    <div id="ourStory">
+      <a href="../html/ourStory.html">  <img src="../pics/הסיפור שלנו.png"></a>
+    </div>
+  <div id="two">
+    <div >
+       <img src="../pics/בואו לעבוד איתנו) פרטים נוספים בקופה.png">
+    </div>
+    <div >
+ <img src="../pics/המנה המומלצת שלנו היום).png">
+    </div></div>
+     <div id="buttom">
+      <a href="../html/aunak.html">
+        האתר עוצב ונבנה ע"י רחלי ותמר האלופות | חוות דעת | מדיניות האתר | משלוחים
+    </a> 
+    </div>
+<script src="../js/index.js"></script>  
+    <script src="../js/hello_to.js"></script>
+    <script src="../js/selfProduct.js"></script>
+    <script src="../js/imgSession.js"></script>
+    <script src="../js/tafrit.js"></script>
+    <script src="../js/sal.js"></script>    
+    <script src="../js/yesal.js"></script>
+    
+     
+
+
+</body>
+</html>

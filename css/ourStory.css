@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@300;500;700&display=swap');
+
+/* רקע וידאו */
+#bg-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -1;
+}
+
+/* בסיס הדף */
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  overflow: hidden;
+  /* אין גלילה */
+  font-family: 'Heebo', sans-serif;
+  line-height: 1.8;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* שכבת תוכן שקופה מעל הווידאו */
+.overlay {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+  padding: 20px;
+  background: none;
+  /* לא מוסיף שקיפות כללית – רק בקונטיינר עצמו */
+}
+
+/* תוכן */
+.container {
+  max-width: 900px;
+  background-color: rgba(0, 0, 0, 0.5);
+  /* כהות קצת יותר מבעבר */
+  padding: 30px 20px;
+  border-radius: 16px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+  text-align: center;
+  direction: rtl;
+}
+
+/* כותרת */
+h1 {
+  text-align: center;
+  color: #b2ebf2;
+  margin-bottom: 20px;
+  font-weight: 700;
+  text-shadow: 0 0 10px rgba(0, 255, 255, 0.6);
+}
+
+.container button {
+  background-color: rgba(0, 0, 0, 0.5);
+  /* כהות קצת יותר מבעבר */
+  border-radius: 12px;
+  height: 1%;
+  width: 25%;
+}
+
+/* פסקאות */
+p,
+.container button {
+  margin-bottom: 15px;
+  font-size: 1.2em;
+  color: #ffffff;
+}
+
+/* הדגשות */
+strong {
+  color: #80cbc4;
+}
+#SignIn{
+      position: absolute; /* או fixed אם את רוצה שיישאר קבוע במסך גם בגלילה */
+  top: 0;
+  right: 0;
+  margin: 10px; /* כדי לא להדבק לקצה */
+  direction: rtl;
+}

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>המוצר הנבחר</title>
+  <link rel="stylesheet" href="../css/selfProduct.css">
+  <link rel="stylesheet" href="../css/yesal.css">
+</head>
+<body onload="showProduct();hello()">
+    <p id="SignIn">אורח </p>
+    <!-- <span hidden id="iN" class="circle-letter"></span> -->
+  <div id="kishurim">
+   <a onclick="back1()"><button> חזרה לדף הקודם</button></a> 
+   <a href="./index.html"><button>  מעבר לדף הבית</button></a>
+   <a href="./sal.html"> <button>   מעבר לסל הקניות </button></a>
+   <a href="../html/enter.html"><button>     להתחברות </button></a>
+
+      </div>
+  <div class="container">
+    <p id="selfName"></p>
+    <p id="selfPrice"></p>
+    <p id="selfDiscription"></p>
+    <div hidden id="selfImg"></div>
+    <div class="buttons">
+      <button onclick="moreOrLess()">+</button>
+      <button id="selfAmount">1</button>
+      <button onclick="moreOrLess()">-</button>
+    </div>
+    <button id="selfSal" onclick="insertS();pop()">להוספה לסל</button>
+  </div>
+  <div class="toast-area" id="toasts">
+    <div style="display: none">
+      <div class="toast" id="clonemother">
+        <div class="toast-content">
+        <div class="before"></div>
+        <div class="icon">&#x2714</div>
+        <div class="text"><p>Success</p><p class="message">המוצר נוסף לסל בהצלחה</p></div>
+        <div onclick="deletethis()" class="close">&#x00D7</div>
+        </div>
+      </div>
+    </div>
+ 
+  </div>
+  <script src="../js/selfProduct.js"></script>
+  <script src="../js/sal.js"></script>
+  <script src="../js/yesal.js"></script>
+  <script src="../js/hello_to.js"></script>
+</body>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>כניסה</title>
+    <link rel="stylesheet" href="../css/enter.css">
+
+</head>
+<body>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+
+    <div class="container">
+        <div class="curved_shape"></div>
+        <div class="curved_shape2"></div>
+    
+        <div class="form_box login">
+            <h2 class="animation" style="--D:0; --S:21;"> Login </h2>
+            <form action="#">
+                
+
+                <div class="input_box animation" style="--D:1; --S:22;">
+                    <!-- <div class="inp"> -->
+                    <input id="reg_name" type="text" required spellcheck="false">
+                    <label for="">Username</label>
+                    <i class="fa-solid fa-user"></i>
+                </div>
+            <!-- </div> -->
+                
+             
+
+                <div  class="input_box animation" style="--D:2; --S:23;">
+                    <!-- <div class="inp"> -->
+                    <input id="reg_email" type="email" required>
+                    <label for="" >email</label>
+                    <i class="fa-solid fa-envelope"></i>
+                </div>
+            <!-- </div> -->
+    
+                <div class="input_box animation" style="--D:3;--S:24;">
+                    <button onclick="checkE()" class="btn" type="submit">Login</button>
+                </div>
+    
+                <div class="reg_link animation" style="--D:4;--S:25;">
+                    <p>
+                        Create an account <a  class="signuplink">Sign Up</a>
+                    </p>
+                </div>
+            </form>
+        </div>
+    
+        <div class="info_content Login">
+            <h2 class="animation" style="--D:0;--S:20;">Welcome Back</h2>
+            <p hidden id="pe" class="animation" style="--D:1;--S:21;">
+                You are not registered in the system, please go to register.
+            </p>
+        </div>
+    
+        <!-- signup -->
+    
+        <div class="form_box signup">
+            <h2 class="animation" style="--li:17; --S:0;"> Registration </h2>
+            <form action="#">
+                <div  class="input_box animation" style="--li:18; --S:1;">
+                    <!-- <div class="inp"> -->
+                    <input id="reg_name1" type="text" required spellcheck="false">
+                    <label for="">Username</label>
+                    <i class="fa-solid fa-user"></i>
+                </div>
+            <!-- </div> -->
+                
+                <div  class="input_box animation" style="--li:18; --S:1;">
+                    <!-- <div class="inp"> -->
+                    <input id="reg_lastname" type="text" required spellcheck="false">
+                    <label for="">lastName</label>
+                    <i class="fa-solid fa-user"></i>
+                </div>
+            <!-- </div> -->
+                
+                <div  class="input_box animation" style="--li:19; --S:2;">
+                    <!-- <div class="inp"> -->
+                    <input id="reg_email1" type="email" required>
+                    <label for="">email</label>
+                    <i class="fa-solid fa-envelope"></i>
+                </div>
+            <!-- </div> -->
+    
+                <div class="input_box animation" style="--li:20;--S:3;">
+                    <button onclick="checkR()" class="btn" type="submit">Regiter</button>
+                </div>
+    
+                <div class="reg_link animation" style="--li:21;--S:4;">
+                    <p>
+                        Already a member? <a  class="signinlink">Log In</a>
+                    </p>
+                </div>
+            </form>
+        </div>
+    
+        <div class="info_content signup">
+            <h2 class="animation" style="--li:17;--S:0;"> Register with us</h2>
+            <p hidden id="pr" class="animation" style="--li:18;--S:1;">
+                You are already registered in the system, please go to login.
+            </p>
+        </div>
+    
+    </div>
+    
+     
+    
+    <script src="../js/hello_to.js"></script>    
+    <script src="../js/login.js"></script>
+
+</body>
+</html>

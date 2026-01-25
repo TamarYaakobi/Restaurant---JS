@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>תפריט</title>
+        <link rel="stylesheet" href="../css/yesal.css">
+
+    <link rel="stylesheet" href="../css/tafrit.css">
+
+</head>
+<body onload="showTafrit();addDataTafrit();hello();createTable()">
+
+        <p class="col" id="SignIn">אורח </p>
+        <!-- <span hidden id="iN" class="circle-letter"></span> -->
+    <div id="snen">
+    <button  class="col" onclick="sortByPrice()">מיין לפי מחיר</button>
+   
+    <select class="col" onchange="selectCaT(event)">
+        <option hidden>בחר קטגוריה</option>
+        <option id="p">מנות פתיחה </option>
+        <option  id="e">מנות עיקריות  </option>
+        <option  id="t">סלטים  </option>
+        <option  id="k"> מרקים </option>
+        <option  id="n">קינוחים  </option>
+        <option  id="m">משקאות  </option>
+
+    </select>
+  <a href="./tafrit.html#cart-area"><button class="col">מעבר לסל</button></a>
+  <a href="../html/index.html"> <button class="col">  מעבר לדף הבית</button></a>
+  <a href="../html/enter.html"><button class="col">     להתחברות </button></a>
+    <select class="col" onchange="tach()">
+        <option hidden> בחר עיצוב</option>
+        <option id="big"> עוצמתי </option>
+        <option id="tree" >פראי   </option>
+      <option id="kid"> ילדותי </option>
+    </select>
+     
+         
+
+
+
+</div>
+    <div class="col" id="bufe">
+        <a href="./bufe.html"><h2> הבופה שלנו, תודו נראה טעים:)</h2>
+        <img src="../pics/הבופה שלנו.jpg"></a>
+    </div>
+    <div class="col" id="main-wrapper">
+        <div id="menu-area">
+    <div  id="Open">
+
+        <h2 id="Open1" hidden>מנות פתיחה - קטנות בגודל, גדולות בטעם – וזה רק ההתחלה</h2>
+    </div>
+    <div  id="aikari">
+        <h2 id="aikari1" hidden>מנות עיקריות - פה נופלות ההחלטות הגדולות</h2>
+    </div>
+    <div  id="saleds">
+        <h2 id="saleds1" hidden>סלטים - טריים, צבעוניים, וגורמים לך להרגיש בריא גם אם אתה לא </h2>
+    </div>
+    <div  id="supes">
+        <h2 id="supes1" hidden>מרקים - לא סתם חימום – זה חיבוק חם בכף</h2>
+    </div>
+    <div  id="desserts">
+        <h2 id="desserts1" hidden>קינוחים -כי הקלוריות לא שואלות שאלות – והן גם לא מקשיבות</h2>
+    </div>
+    <div  id="drinks">
+        <h2 id="drinks1" hidden>משקאות - הכי קר, הכי פירותי – הכי לא משאיר רגשות אשמה</h2>
+    </div>
+    <div class="toast-area" id="toasts">
+        <div style="display: none">
+          <div class="toast" id="clonemother">
+            <div class="toast-content">
+            <div class="before"></div>
+            <div class="icon">&#x2714</div>
+            <div class="text"><p>Success</p><p class="message">המוצר נוסף לסל בהצלחה</p></div>
+            <div onclick="deletethis()" class="close">&#x00D7</div>
+            </div>
+          </div>
+        </div>
+     
+      </div>
+   </div>
+<!-- סל -->
+  <div class="col" id="cart-area">
+
+   <section id="sec">
+        <!--for demo wrap-->
+        <h2>Your shopping cart
+</h2>
+        
+        <div class="tbl-header">
+            <table cellpadding="0" cellspacing="0" border="0">
+                <thead>
+                    <tr>
+                        <th>   </th>
+                        <th></th>
+                        <th></th>
+                        <th>   </th>
+                        
+                    </tr>
+                </thead>
+            </table>
+        </div>
+        <div class="tbl-content">
+            <table cellpadding="0" cellspacing="0" border="0">
+                <tbody id="aba">
+                </tbody>
+            </table>
+        </div>
+    </section>
+    <section id="secsum">
+    <div id="sum"></div>
+    <div class="msg animate slide-in-down"></div>
+    <div><button id="pay" class="btn btn-success" onclick="check()">למעבר לתשלום</button></div>
+</section>
+    <div class="toast-area" id="toasts1">
+        <div style="display: none">
+          <div class="toast" id="clonemother1">
+            <div class="toast-content">
+            <div class="before"></div>
+            <div class="icon">&#x2714</div>
+            <div class="text"><p>Success</p><p class="message">המשלוח בדרך אליך</p></div>
+            <div onclick="deletethis()" class="close">&#x00D7</div>
+            </div>
+          </div>
+        </div>
+     
+      </div>
+</div>
+</div>
+    <script src="../js/imgSession.js"></script>
+    <script src="../js/tafrit.js"></script>
+    <script src="../js/selfProduct.js"></script>
+    <script src="../js/sal.js"></script>    
+    <script src="../js/yesal.js"></script>
+    <script src="../js/index.js"></script>
+    <script src="../js/hello_to.js"></script>
+    <script src="../js/Self-adjustment.js"></script>
+
+</body>
+</html>

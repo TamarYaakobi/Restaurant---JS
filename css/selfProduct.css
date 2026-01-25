@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  direction: ltr;
+  background-size: cover;
+  background-position: center;
+  backdrop-filter: blur(6px);
+  min-height: 100vh;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  padding: 40px;
+  color:  #35383bed;;
+
+}
+
+.container {
+  background: rgba(220, 220, 220, 0.85);
+  padding: 40px;
+  border-radius: 20px;
+  max-width: 600px;
+  width: 100%;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+  text-align: right;
+}
+
+#selfName {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+#selfPrice {
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: #35383bed;;
+  margin-bottom: 20px;
+}
+
+#selfDiscription {
+  font-size: 1.3rem;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+button {
+  background: #e53935;
+  color: white;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: 0.3s;
+  font-weight: bold;
+  margin-top: auto;
+  box-shadow: 0 4px 8px rgba(229, 57, 53, 0.3);
+}
+
+button:hover {
+  background: #c62828;
+}
+
+#selfAmount {
+  background: #eee;
+  color: #000;
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-size: 1.2rem;
+}
+#SignIn{
+      position: absolute; /* או fixed אם את רוצה שיישאר קבוע במסך גם בגלילה */
+  top: 0;
+  right: 0;
+  margin: 10px; /* כדי לא להדבק לקצה */
+  direction: rtl;
+}

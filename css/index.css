@@ -1,0 +1,102 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+  }
+  @keyframes fade{
+    from{
+      opacity:0.4;
+    }
+    to{
+      opacity:1;
+    }
+  }
+  
+  body{
+    background:black;
+/* display: flex;
+flex-wrap: wrap; */
+/* gap: 1%; */
+
+  }
+  
+  #slider{
+    margin:0 auto;
+    width:98%;
+    overflow:hidden;
+margin-bottom: 2%;
+
+
+  }
+  #ourStory{
+    margin:0 auto;
+    width:98%;
+
+  margin-bottom: 2%; /* רווח בין כל דיב לדיב הבא */
+
+
+  }
+  .slides{
+    overflow:hidden;
+    animation-name:fade;
+    animation-duration:1s;
+    display:none;
+    
+  }
+  
+  img{
+    width:100%;
+  }
+  #two{
+    display: flex;
+    margin-bottom: 2%;
+  }
+  #two img{
+    width:96%;
+ margin:0 auto;
+
+  }
+  /* #dot{
+    margin:0 auto;
+    text-align:center;
+  } */
+  /* נקודות */
+  /* .dot{
+    display:inline-block;
+    border-radius:50%;
+    background:#d3d3d3;
+    padding:8px;
+    margin:10px 5px;
+
+  } */
+  
+  .active{
+    background:black;
+  }
+  
+  @media (max-width:567px){
+    #slider{
+      width:100%;
+  
+    }
+  }
+  
+  #heading{
+    display:block;
+    text-align:center;
+    font-size:2em;
+    margin:10px 0px;
+  
+  }
+
+  
+  #logo{
+    width: 25%;
+    border-radius: 50%;
+height:80% ;
+  }
+  #buttom{
+    background-color: black;
+    direction: rtl;
+    color: white;
+  }
